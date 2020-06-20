@@ -42,8 +42,8 @@ exports.create = async (req, res) => {
     req.flash('success', 'This hero was registered successfully');
     res.redirect(`/superheroes/${superhero.id}`);
   } catch (error) {
-    req.flash('danger', 'There was an issue fetching the superheroes list');
-    res.redirect('/');
+    req.flash('danger', 'There was an issue fetching the superheroes list: ${error}');
+    res.redirect('/new');
   }
 };
 
