@@ -15,7 +15,6 @@
         <th>Actions</th>
       </tr>
     </thead>
-
     <tbody>
       <% for (let hero of superheroes) { %>
         <tr>
@@ -23,6 +22,7 @@
           <td><%= hero.alias %></td>
           <td><%= hero.createdAt %></td>
           <td>
+
             <a href="/superheroes/<%= hero.id %>">
               <i class="fa fa-eye"></i>
             </a>
@@ -34,6 +34,7 @@
         </tr>
       <% } %>
     </tbody>
+  
   </table>
 </div>
 <%- include ('../partials/footer') %>
